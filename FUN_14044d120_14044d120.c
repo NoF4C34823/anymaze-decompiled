@@ -1,0 +1,64 @@
+
+void FUN_14044d120(longlong param_1,longlong param_2,longlong param_3,longlong param_4,
+                  longlong *param_5,longlong *param_6,longlong param_7,undefined4 param_8,
+                  longlong param_9)
+
+{
+  longlong lVar1;
+  longlong lVar2;
+  ulonglong uVar3;
+  longlong lVar4;
+  longlong lVar5;
+  longlong lVar6;
+  longlong lVar7;
+  
+  param_2 = param_2 >> 2;
+  lVar5 = param_6[1];
+  lVar1 = *param_5 * 3;
+  uVar3 = lVar1 + 7U & 0xfffffffffffffff8;
+  lVar2 = *param_6;
+  param_1 = param_1 + ((longlong)(int)(lVar2 - 1U >> 1) * 3 + (int)(lVar5 - 1U >> 1) * param_2) * -4
+  ;
+  if (param_7 == 0) {
+    if ((lVar2 == 3) && (lVar5 == 3)) {
+      FUN_140454d20(param_1,param_2,param_3);
+      return;
+    }
+    lVar6 = 0;
+    lVar7 = 0;
+    lVar4 = param_9;
+    if (0 < (longlong)(lVar5 - 1U)) {
+      while( true ) {
+        FUN_142d273a0(param_1,lVar4,lVar1,lVar2 * 3,3);
+        lVar5 = param_6[1];
+        lVar6 = lVar6 + 1;
+        param_1 = param_1 + param_2 * 4;
+        lVar4 = lVar4 + uVar3 * 4;
+        if (lVar5 + -1 <= lVar6) break;
+        lVar2 = *param_6;
+      }
+    }
+    lVar5 = lVar5 + -1;
+    if (0 < param_5[1]) {
+      do {
+        FUN_142d273a0(param_1,lVar4,lVar1,*param_6 * 3,3);
+        thunk_FUN_142d27530(param_9,uVar3,param_3,lVar1,param_6[1]);
+        lVar5 = lVar5 + 1;
+        lVar7 = lVar7 + 1;
+        param_1 = param_1 + param_2 * 4;
+        param_3 = param_3 + (param_4 >> 2) * 4;
+        lVar4 = lVar4 + uVar3 * 4;
+        if (param_6[1] <= lVar5) {
+          lVar5 = 0;
+          lVar4 = param_9;
+        }
+      } while (lVar7 < param_5[1]);
+    }
+  }
+  else {
+    FUN_140453bc0(param_1,param_2,param_3,param_4 >> 2,lVar1,param_5[1],lVar2,lVar5,param_7,param_8,
+                  3);
+  }
+  return;
+}
+

@@ -1,0 +1,23 @@
+
+void FUN_140170716(longlong param_1,ulonglong param_2,ulonglong param_3,float param_4)
+
+{
+  longlong in_R9;
+  longlong in_R10;
+  float in_XMM0_Da;
+  float in_XMM2_Da;
+  
+  if (param_2 < param_3) {
+    in_R9 = in_R9 + param_1;
+    do {
+      *(float *)(in_R10 + param_1 * 4 + param_2 * 4) =
+           (float)((uint)*(byte *)((param_2 - 2) + in_R9) + (uint)*(byte *)(param_2 + 2 + in_R9)) *
+           param_4 + (float)((uint)*(byte *)((param_2 - 1) + in_R9) +
+                            (uint)*(byte *)(param_2 + 1 + in_R9)) * in_XMM2_Da +
+           (float)*(byte *)(param_2 + in_R9) * in_XMM0_Da;
+      param_2 = param_2 + 1;
+    } while (param_2 < param_3);
+  }
+  return;
+}
+

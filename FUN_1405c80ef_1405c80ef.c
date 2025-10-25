@@ -1,0 +1,21 @@
+
+void FUN_1405c80ef(longlong param_1,undefined8 param_2,longlong param_3,ulonglong param_4)
+
+{
+  ulonglong in_RAX;
+  longlong in_R10;
+  float in_XMM0_Da;
+  float in_XMM2_Da;
+  
+  if (in_RAX < param_4) {
+    param_1 = param_1 + param_3;
+    do {
+      *(float *)(in_R10 + param_3 * 4 + in_RAX * 4) =
+           (float)((uint)*(byte *)((in_RAX - 3) + param_1) + (uint)*(byte *)(in_RAX + 3 + param_1))
+           * in_XMM2_Da + (float)*(byte *)(in_RAX + param_1) * in_XMM0_Da;
+      in_RAX = in_RAX + 1;
+    } while (in_RAX < param_4);
+  }
+  return;
+}
+
